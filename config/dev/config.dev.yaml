@@ -1,0 +1,29 @@
+listenPort: 8888 # A server监听端口号
+rpcPort: 48889 # Http 健康检测端口
+performancePort: 49898 # 性能分析端口
+serverId: 42 # 服务ID （不重要）
+poolServer: xxx.com:443 # 外接矿池地址
+maxSessionCount: 100
+
+# 证书和秘钥, 可以直接用默认的
+ServerTlsCrtPath: "./server.crt"
+ServerTlsKeyPath: "./server.key"
+
+debug: true
+logger:
+  filename: ./ragent.log
+  maxSize: 500
+  maxBackups: 1000
+  maxAge: 1000
+  level: debug
+  verbose: 1
+  compress: true
+
+
+redis:
+  address: 127.0.0.1
+  password:
+  port: 6379
+  maxidle: 3
+  maxactive: 10
+  idletimeout: 0
